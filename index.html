@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Happy Birthday Wan Nur Fasha Aida</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <audio id="bgMusic" loop>
+    <source src="assets/song.mp3" type="audio/mp3" />
+  </audio>
+
+  <div class="petal-layer"></div>
+
+  <button class="music-btn" onclick="toggleMusic()">
+    <span id="musicIcon">♪</span>
+    <span>Our Song</span>
+  </button>
+
+  <main class="app">
+
+    <section class="book" id="book">
+
+      <!-- PAGE 1 -->
+      <div class="page active intro-page">
+        <div class="intro-heart">💗</div>
+
+        <h1>For Wan Nur Fasha Aida</h1>
+
+        <p>
+          Sebelum start tuu,<br>
+          tekan dulu button play ni untuk feel sikit hehe.
+        </p>
+
+        <button class="main-btn" onclick="startExperience()">
+          🎵 PLAY
+        </button>
+      </div>
+
+      <!-- PAGE 2 -->
+      <div class="page cover-page">
+        <div class="cover-glow"></div>
+
+        <h1>Happy Birthday</h1>
+        <h2>Wan Nur Fasha Aida</h2>
+
+        <p>
+          Saya buat website simple ni for you sayang.<br>
+          Tengok slow-slow ya sayang 🌸
+        </p>
+      </div>
+
+      <!-- PAGE 3 -->
+      <div class="page flower-page">
+        <div class="stars"></div>
+
+        <h1 class="neon-title">
+          HAPPY BIRTHDAY<br />
+          SAYANG
+        </h1>
+
+        <p class="neon-subtitle">I LOVE YOU ❤️</p>
+
+        <div class="garden">
+          <div class="flower f1">
+            <div class="stem"></div>
+            <div class="leaf l1"></div>
+            <div class="leaf l2"></div>
+            <div class="head"><span></span><span></span><span></span><span></span><b></b></div>
+          </div>
+
+          <div class="flower f2">
+            <div class="stem"></div>
+            <div class="leaf l1"></div>
+            <div class="leaf l2"></div>
+            <div class="head"><span></span><span></span><span></span><span></span><b></b></div>
+          </div>
+
+          <div class="flower f3">
+            <div class="stem"></div>
+            <div class="leaf l1"></div>
+            <div class="leaf l2"></div>
+            <div class="head"><span></span><span></span><span></span><span></span><b></b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE 4 -->
+      <div class="page letter-page">
+        <h2>Untuk Awak 💌</h2>
+        <p id="typeText"></p>
+      </div>
+
+      <!-- PAGE 5 -->
+      <div class="page polaroid-page">
+        <h2>Our Memories 📸</h2>
+
+        <div class="polaroid-gallery">
+          <div class="polaroid" onclick="openLightbox('assets/photo1.jpg')">
+            <img src="assets/photo1.jpg" alt="">
+            <p>Si Comel ❤️</p>
+          </div>
+
+          <div class="polaroid" onclick="openLightbox('assets/photo2.jpg')">
+            <img src="assets/photo2.jpg" alt="">
+            <p>Si Syantik🌷</p>
+          </div>
+
+          <div class="polaroid" onclick="openLightbox('assets/photo3.jpg')">
+            <img src="assets/photo3.jpg" alt="">
+            <p>Gorgeous 💕</p>
+          </div>
+
+          <div class="polaroid" onclick="openLightbox('assets/photo4.jpg')">
+            <img src="assets/photo4.jpg" alt="">
+            <p>Yang paling cantikkkk ✨</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHOTO PAGES -->
+      <div class="page photo-page">
+        <img src="assets/photo5.jpg" class="big-photo" alt="">
+        <p>First gambar kita heee 🤍</p>
+      </div>
+
+      <div class="page photo-page">
+        <img src="assets/photo6.jpg" class="big-photo" alt="">
+        <p>Paling minat vibe vibe budak pandai hee 🌷</p>
+      </div>
+
+      <div class="page photo-page">
+        <img src="assets/photo7.jpg" class="big-photo" alt="">
+        <p>Yang ni paling comell </p>
+      </div>
+
+      <div class="page photo-page">
+        <img src="assets/photo8.jpg" class="big-photo" alt="">
+        <p>With or withour makeup, You still pretty 💗</p>
+      </div>
+
+      <div class="page photo-page">
+        <img src="assets/photo9.jpg" class="big-photo" alt="">
+        <p>Gambar paling cantikk eee</p>
+      </div>
+
+      <div class="page photo-page">
+        <img src="assets/photo10.jpg" class="big-photo" alt="">
+        <p>Alolo curi curi ambil gambar kat fon kita ek</p>
+      </div>
+
+      <!-- VIDEO -->
+      <div class="page video-page">
+        <h2>Video Video Kamu Sayang 🎥</h2>
+
+        <video controls>
+          <source src="assets/video1.mp4" type="video/mp4">
+        </video>
+
+        <p>Rajin laa sikit buat video nii 💗</p>
+      </div>
+
+      <!-- REASONS -->
+      <div class="page reasons-page">
+        <h2>Why I Love You 💗</h2>
+
+        <div class="reason-card" id="reasonCard">
+          Sebab awak selalu buat saya senyum.
+        </div>
+
+        <button class="main-btn" onclick="changeReason()">Sebab Lain</button>
+      </div>
+
+
+      <div class="page sky-page">
+  <canvas id="starCanvas"></canvas>
+
+  <div class="sky-content">
+    <h1 id="skyName"></h1>
+    <p id="skyWish"></p>
+
+    <div class="final-photo-stage" id="finalPhotoStage">
+      <img id="finalPhoto" src="assets/photo1.jpg" alt="">
+    </div>
+
+    <button class="main-btn" id="finalBtn" onclick="startNightSky()">
+      ✨ Start Final Surprise
+    </button>
+  </div>
+</div>
+
+    </section>
+
+    <div class="controls">
+      <button onclick="prevPage()">← Prev</button>
+      <div id="dots"></div>
+      <button onclick="nextPage()">Next →</button>
+    </div>
+
+  </main>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
